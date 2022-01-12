@@ -1,18 +1,24 @@
 package com.company;
 
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
-
-        String str = "Pratik Patwardhan";
-        char name[] = new char[40];
-        str.getChars(0, 17, name, 0);
-        for (int i = 16; i >= 0; i--) {
-            {
-                System.out.print(name[i]);
+        // write your code here
+        //mirror pyramid
+        int n = 4;
+        for (int i = 1; i <= n; i++) {
+//printing space
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
             }
+//printing stars
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
     }
 }
+
+
+
