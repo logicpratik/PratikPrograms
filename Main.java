@@ -1,24 +1,25 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        //mirror pyramid
-        int n = 4;
-        for (int i = 1; i <= n; i++) {
-//printing space
-            for (int j = 1; j <= n - i; j++) {
-                System.out.print(" ");
+        int n;
+        do {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the height of pyramid");
+            n = sc.nextInt();
+            for (int i = n; i >= 1; i--) {
+                for (int j = 1; j <= i; j++) {
+                    System.out.print("*");
+                }
+                System.out.println();
             }
-//printing stars
-            for (int j = 1; j <= i; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
+        } while (n >= 1);
+        System.out.println("Value cannot be less than one");
     }
 }
-
 
 
